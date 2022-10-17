@@ -29,7 +29,6 @@ class Calculator
         $this->mainNumber /= $divisionNumberFunc;
         if ($divisionNumberFunc == 0) {
             $this->mainNumber = 0;
-            return $this;
         }
         return $this;
     }
