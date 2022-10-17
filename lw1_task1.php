@@ -4,27 +4,27 @@ $calculator = new Calculator();
 
 class Calculator
 {
-    private $mainNumber;
+    private float $mainNumber = 0;
 
-    public function sum(float $summaNumberFunc)
+    public function sum(float $summaNumberFunc): self
     {
         $this->mainNumber += $summaNumberFunc;
         return $this;
     }
 
-    public function minus(float $minusNumberFunc)
+    public function minus(float $minusNumberFunc): self
     {
         $this->mainNumber -= $minusNumberFunc;
         return $this;
     }
 
-    public function product(float $productNumberFunc)
+    public function product(float $productNumberFunc): self
     {
         $this->mainNumber *= $productNumberFunc;
         return $this;
     }
 
-    public function division(float $divisionNumberFunc)
+    public function division(float $divisionNumberFunc): self
     {
         $this->mainNumber /= $divisionNumberFunc;
         if ($divisionNumberFunc === 0)
