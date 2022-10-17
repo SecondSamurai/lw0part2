@@ -27,8 +27,10 @@ class Calculator
     public function division(float $divisionNumberFunc): self
     {
         $this->mainNumber /= $divisionNumberFunc;
-        if ($divisionNumberFunc === 0)
+        if ($divisionNumberFunc == 0) {
             $this->mainNumber = 0;
+            return $this;
+        }
         return $this;
     }
 
@@ -38,4 +40,4 @@ class Calculator
     }
 }
 
-echo '1 + 2 * 3 / 3 = '  . $calculator->sum(1)->sum(2)->product(3)->division(3)->getResult(); // 3
+echo '1 + 2 * 3 / 3 = '  . $calculator->sum(1)->sum(2)->product(3)->division(0)->getResult(); // 3
