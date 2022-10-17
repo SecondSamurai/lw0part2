@@ -4,7 +4,7 @@ $calculator = new Calculator();
 
 class Calculator
 {
-    private float $mainNumber;
+    private $mainNumber;
 
     public function sum(float $summaNumberFunc)
     {
