@@ -27,9 +27,8 @@ class Calculator
     public function division(float $divisionNumberFunc): self
     {
         $this->mainNumber /= $divisionNumberFunc;
-        if ($divisionNumberFunc == 0) {
+        if ($divisionNumberFunc == 0)
             $this->mainNumber = 0;
-        }
         return $this;
     }
 
